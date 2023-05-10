@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242424;
+  color: #fff;
+}
+
+.App {
+  width: 900px;
+  height: 900px;
+  border: 1px solid yellow;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.matrix {
+  margin-top: 2rem;
+}
+
+.row {
+  /* border: 1px solid green; */
+  /* padding: 1rem; */
+  display: flex;
+}
+
+.cell  {
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+  color: #242424;
+}
+
+
+.BO {
+  background-color: aqua;
+}
+
+.BO::after {
+  content: 'B'
+}
+
+.start {
+  background-color: red;
+}
+
+.start::after {
+  content: 'S';
+}
+
+.end {
+  background-color: yellow;
+}
+
+.end::after {
+  content: 'E';
+}
+
+.MO {
+  background-color: blue;
+}
+
+.MO::after {
+  content: 'M'
+}
+
+.form {
+  border: 3px solid green;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+input {
+  height: 2rem;
+  /* padding: 1rem; */
+
+}
+
+button {
+  cursor: pointer;
+}
