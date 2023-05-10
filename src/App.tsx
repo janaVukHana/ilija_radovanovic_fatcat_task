@@ -123,7 +123,28 @@ const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
   
     return (
       <div className="App">
-        <button style={animate === false ? {backgroundColor: 'green', color: 'white'} : {backgroundColor: 'red', color: 'white'}} onClick={handleStartAnimation}>{animate === false ? 'Start animation':'Stop animation'}</button>
+        <h1>My Matrix</h1>
+        {/* form for changing size, start, end, BO number */}
+        <div className="form">
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label>Matrix Size: </label>
+              <input type="number" value={matrixSize} onChange={handleChangeSize} />
+            </div>
+            <div className="form-control">
+              <label>Number Of Blocks: </label>
+              <input type="number" value={BOn} onChange={handleBOn} />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        {/* animation button */}
+        <button 
+          className={animate === false ? 'btn-start':'btn-stop'}
+          onClick={handleStartAnimation}>
+            {animate === false ? 'Start animation':'Stop animation'}
+        </button>
         
         {/* SHOW MATRIX */}
         <div className="matrix">
@@ -136,20 +157,6 @@ const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
           />
         </div>
 
-        {/* form for changing size, start, end, BO number */}
-        <div className="form">
-          <form onSubmit={handleSubmit}>
-            <div className="form-control">
-              <label>Size: </label>
-              <input type="number" value={matrixSize} onChange={handleChangeSize} />
-            </div>
-            <div className="form-control">
-              <label>BO number: </label>
-              <input type="number" value={BOn} onChange={handleBOn} />
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
       </div>
     );
   
